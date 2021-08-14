@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+# Questo sopra, serve per poter eseguire il file, senza chiamare manualmente il comando ruby, ma solo con './nomeprogetto'
+require 'rubygems'           # require, per recuperare le gemme dal gemfile
+require 'bundler/setup'
+require_relative 'application'  # require_relative per importare file del progetto(non gemme).
+# Meglio non avere codice nel main file, che esegue. 
+# Di solito nel file principale c'è una sola linea, che è del tipo "Application.run"
+
+Application.new.run
